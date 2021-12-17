@@ -1,6 +1,6 @@
 default: &default
-  adapter: mysql2
-  host: localhost
+  adapter: postgresql
+  host: ''
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
   encoding: utf8
