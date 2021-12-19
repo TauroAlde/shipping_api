@@ -29,6 +29,8 @@ gem 'jwt'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
 

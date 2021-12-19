@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  host: ''
+  host: 'localhost'
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
   encoding: utf8

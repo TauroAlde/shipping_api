@@ -16,5 +16,12 @@ class Address < ApplicationRecord
   validates :postal_code, length: { is: 5 }, presence: true
   validates :contry_code, length: { is: 2 }, presence: true
 
-  has_many :shipments
+  has_many :shipments_from, class_name: "Shipment", foreign_key: "address_from_id"
+  has_many :shipments_to, class_name: "Shipment", foreign_key: "address_to_id"
+
+  private
+
+  def downcase_email
+    self.email.downcase!
+  end
 end
