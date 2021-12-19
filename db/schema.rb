@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_231459) do
+ActiveRecord::Schema.define(version: 2021_12_17_004515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,19 @@ ActiveRecord::Schema.define(version: 2021_12_16_231459) do
     t.integer "contry_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "parcels", force: :cascade do |t|
+    t.decimal "lenght", precision: 10
+    t.decimal "width", precision: 10
+    t.decimal "height", precision: 10
+    t.string "dimension_unit"
+    t.decimal "weight", precision: 10
+    t.string "weight_unit"
+    t.bigint "shipment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shipment_id"], name: "index_parcels_on_shipment_id"
   end
 
 end
