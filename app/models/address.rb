@@ -4,9 +4,9 @@ class Address < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z]+[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   VALID_STREET1_REGEX = /\A([^%$&@+|]|[-])*\Z/
-  VALID_NAME_REGEX = /\A[a-zA-Z0-9 ]+\z/
-  VALID_CITY_REGEX = /\A[a-zA-Z ]+\z/
-  VALID_PROVINCE_REGEX = /\A[a-zA-Z ]+\z/
+  VALID_NAME_REGEX = /\A[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+\z/
+  VALID_CITY_REGEX = /\A[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+\z/
+  VALID_PROVINCE_REGEX = /\A[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+\z/
 
   validates :name, format: { with: VALID_NAME_REGEX }, length: { maximum: 64 }
   validates :email, presence: true, length: { maximum: 128 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
