@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  apipie
+  namespace :api do
+    namespace :v1 do
+      post "/imports", to: "imports#create"
+      post "/import_details", to: "import_details#create"
+      post "/login", to: "login#create"
+    end
+  end
 end
