@@ -13,9 +13,10 @@ gem 'puma', '~> 5.0'
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+gem 'charlock_holmes', '~> 0.7.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'apipie-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -24,12 +25,14 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'active_model_serializers', '~> 0.10.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
 gem 'jwt'
 
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'dotenv-rails'
+
+gem 'sidekiq'
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
