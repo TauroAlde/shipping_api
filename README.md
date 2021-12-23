@@ -1,24 +1,60 @@
-# README
+# Shipping API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+## Installation
 
 * Ruby version
+  - 2.7.5
+* Rails version
+  - 6.1.4.4
 
-* System dependencies
+* DataBase
+    - PostgreSql
 
-* Configuration
+Instalaltion database 
+- Quickstart guide: https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart-es
 
-* Database creation
+Configuration .env
 
-* Database initialization
+    DATABASE_USERNAME=
+    DATABASE_PASSWORD=
 
-* How to run the test suite
+ Create User, Create Database, Grant privileges/access: https://medium.com/@mohammedhammoud/postgresql-create-user-create-database-grant-privileges-access-aabb2507c0aa
 
-* Services (job queues, cache servers, search engines, etc.)
+    DATABASE_DEVELOPMENT=
+    DATABASE_TEST=
+    DATABASE_PRODUCTION=
 
-* Deployment instructions
+Life time for JWT in seconds
 
-* ...
+    TOKEN_LIFETIME=
+
+Time leeway for jwt in seconds
+
+    EXP_LEEWAY=
+
+Json web token key
+
+    * PRIVATE_SECRET_KEY=
+ 
+
+Installs the gems
+
+* bundler install
+ 
+Create the database and migrate
+
+    Rails db:create
+    Rails db:migrate
+
+Install redis
+* downlaod redis
+    - url: https://redis.io/download
+
+Command for run redis
+*  src/redis-server
+
+Command for run server rails
+*   rails server
+
+Command for run sidekiq
+* bundle exec sidekiq
