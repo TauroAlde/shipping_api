@@ -1,4 +1,4 @@
-class UserSerializer < ActiveModel::Serializer
+class ShipmentSerializer < ActiveModel::Serializer
   attributes :id, :order_id, :address_from_id, :address_to_id
 
   belongs_to :order
